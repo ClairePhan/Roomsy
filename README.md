@@ -1,6 +1,11 @@
 # Roomsy
 
+<<<<<<< HEAD
 Project Description: 
+=======
+// testing commit
+# Project Description:
+>>>>>>> 901b02b7550245eb9b9d5760147945eab1bcb50d
 
 We plan to create a room management web app/page assistant known as Roomsy. Our core features and use cases will include: 
 
