@@ -2,9 +2,6 @@
 
 
 Project Description: 
-=======
-
-# Project Description:
 
 We plan to create a room management web app/page assistant known as Roomsy. Our core features and use cases will include: 
 
