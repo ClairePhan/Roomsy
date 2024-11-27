@@ -1,0 +1,154 @@
+@font-face {
+    /* Font 1 */ 
+    font-family: 'Manrope';
+    src: url('\Users\cortn\A4\Roomsy\Manrope-VariableFont_wght.ttf') format('truetype');
+
+    /* Font 2 */
+    font-family: 'Outfit';
+    src: url('\Users\cortn\A4\Roomsy\Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    background-color: rgba(0,5,23,255);
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 150px;
+    row-gap: 50px;
+    font-size:20px;
+    
+}
+
+.version1-h1{
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: 45;
+    font-weight: bold;
+    line-height: 0.9;
+    height: 29;
+    color: white;
+    white-space: nowrap;
+}
+
+h1 {
+    font-family: 'Manrope', 'Outfit',Arial, Helvetica, sans-serif;
+    font-size: 40;
+    line-height: 0.9;
+    font-weight:100;
+    height: 40;
+    color: white;
+    white-space: nowrap;  
+}
+
+h2 {
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+    font-weight: 350;
+    font-size: 23;
+    color: white;
+    height: 25;
+}
+
+h3 {
+    color:#636377;
+    font-size: 16px;
+    height:10;
+}
+
+
+input[type="username"] {
+    width: 100%;
+    height: 45px;
+    font-size: 15;
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    line-height: 50px;
+    border-radius: 10px;
+    border-color:#636377;
+    border: 1px solid #1b1a38;
+    background: #1b1a38;
+    color: white;
+}
+
+input[type="password"] {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    line-height: 50px;
+    border-radius: 10px;
+    border-color:#636377;
+    border: 1px solid #1b1a38;
+    background: #1b1a38;
+    color:white;
+}
+
+
+button {
+    border: 1px solid #6788ff;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+    margin-top: 20px;
+    text-align:center;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #6788ff;
+    color: white;
+    font-size: 16px;
+}
+
+
+.login-form {
+    padding: 40px;
+    color: black;
+    width: 500;
+    height: 400;
+}
+
+
+.login-box {
+    font-weight: 400;
+}
+
+.logo {
+    height: 430;
+    transition: filter 0.3s ease, transform 0.3s ease
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 3px rgb(255, 255, 255));
+    transform: scale(1.10);
+}
+
+.checkbox {
+    color: white;
+    font-size: 16;
+}
+
+.register-link {
+    color: white;
+    font-size: 16;
+}
+
+.login-info {
+    height: 180;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: left;
+}
+.register-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: left;
+}
