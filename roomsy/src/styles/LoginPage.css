@@ -1,11 +1,11 @@
 @font-face {
     /* Font 1 */ 
     font-family: 'Manrope';
-    src: url('\Users\cortn\A4\Roomsy\Manrope-VariableFont_wght.ttf') format('truetype');
+    src: url('C:\Users\Claire\Desktop\uci\24-25UCICourses\24-25FallQuarter\Inf133\Roomsy\roomsy\fonts\Manrope-VariableFont_wght.ttf') format('truetype');
 
     /* Font 2 */
     font-family: 'Outfit';
-    src: url('\Users\cortn\A4\Roomsy\Outfit-VariableFont_wght.ttf') format('truetype');
+    src: url('C:\Users\Claire\Desktop\uci\24-25UCICourses\24-25FallQuarter\Inf133\Roomsy\roomsy\fonts\Outfit-VariableFont_wght.ttf') format('truetype');
 }
 
 body {
@@ -59,7 +59,7 @@ h3 {
 }
 
 
-input[type="username"] {
+input[type="email"] {
     width: 100%;
     height: 45px;
     font-size: 15;
