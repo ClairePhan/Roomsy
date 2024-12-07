@@ -16,7 +16,8 @@ function Login() {
     };
 
     return (
-        <div className="login-form">
+        <body>
+            <div className="login-form">
             <form onSubmit={handleLogin}>
                 <h1 className="version1-h1">Roomsy.</h1>
                 <h2>A space for everyone.</h2>
@@ -57,6 +58,7 @@ function Login() {
                 </div>
             </form>
         </div>
+        </body>
     );
 }
 
