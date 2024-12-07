@@ -1,11 +1,11 @@
 @font-face {
     /* Font 1 */ 
     font-family: 'Manrope';
-    src: url('\Users\cortn\A4\Roomsy\Manrope-VariableFont_wght.ttf') format('truetype');
+    src: url('../../fonts/Manrope-VariableFont_wght.ttf') format('truetype');
 
     /* Font 2 */
     font-family: 'Outfit';
-    src: url('\Users\cortn\A4\Roomsy\Outfit-VariableFont_wght.ttf') format('truetype');
+    src: url('../../fonts/Outfit-VariableFont_wght.ttf') format('truetype');
 }
 
 body {
