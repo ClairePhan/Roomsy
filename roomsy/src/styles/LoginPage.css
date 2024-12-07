@@ -1,11 +1,10 @@
 @font-face {
     /* Font 1 */ 
     font-family: 'Manrope';
-    src: url('C:\Users\Claire\Desktop\uci\24-25UCICourses\24-25FallQuarter\Inf133\Roomsy\roomsy\fonts\Manrope-VariableFont_wght.ttf') format('truetype');
-
+    src: url('../../fonts/Manrope-VariableFont_wght.ttf') format('truetype');
     /* Font 2 */
     font-family: 'Outfit';
-    src: url('C:\Users\Claire\Desktop\uci\24-25UCICourses\24-25FallQuarter\Inf133\Roomsy\roomsy\fonts\Outfit-VariableFont_wght.ttf') format('truetype');
+    src: url('../../fonts/Outfit-VariableFont_wght.ttf') format('truetype');
 }
 
 body {
