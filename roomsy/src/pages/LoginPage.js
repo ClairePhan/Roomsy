@@ -53,7 +53,7 @@ function Login() {
 
                 <div className="register-link">
                     <p>Don't have an account?</p>
-                    <a href="#" style={{ color: '#6788ff' }}>Register</a>
+                    <a href="/signup" style={{ color: '#6788ff' }}>Register</a>
                 </div>
             </form>
         </div>
