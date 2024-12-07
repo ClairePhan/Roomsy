@@ -1,18 +1,26 @@
+import React, { useState} from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../services/firebase";
+import { useNavigate } from 'react-router-dom';
 import '../styles/LoginPage.css';
 
-function Login() {
-    const handleLogin = (e) => {
-        e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                console.log("User logged in: ", userCredential.user);
-            })
-            .catch((error) => console.error(error.message));
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log("Login Successful");
+            navigate('/dashboard');
+        }
+        catch(err) {
+            console.log(err);
+        }
+        
     };
 
     return (
@@ -30,6 +38,7 @@ function Login() {
                             name="email"
                             placeholder="Enter your email..."
                             required
+                            onChange = {(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="login-box">
@@ -39,6 +48,7 @@ function Login() {
                             name="password"
                             placeholder="Enter your password..."
                             required
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
                 </div>
@@ -54,7 +64,7 @@ function Login() {
 
                 <div className="register-link">
                     <p>Don't have an account?</p>
-                    <a href="#" style={{ color: '#6788ff' }}>Register</a>
+                    <a href="/signup" style={{ color: '#6788ff' }}>Sign Up</a>
                 </div>
             </form>
         </div>
