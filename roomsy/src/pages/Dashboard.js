@@ -1,11 +1,18 @@
+import '../styles/Dashboard.css';
+
 function Dashboard() {
-    return (
-        <>
-            <div className = "dashboard">
-                <h2>Dashboard</h2>
-            </div>
-        </>
-    );
+
+    return ( 
+        <body>
+            <section className="collective">
+                <div className="calendar">
+                
+                </div>
+                <div className="dashboard"> 
+                </div>
+            </section>
+       </body>
+    )
 }
 
 export default Dashboard;
