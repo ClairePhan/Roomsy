@@ -1,8 +1,15 @@
 import { db } from "./firebase";
-import { doc, setDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { doc, setDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 
 export const createHousehold = async (userId) => {
+    const userRef = doc(db, "users", userId);
+    const userDoc = await getDoc(userRef);
+
+    if (userDoc.exists() && userDoc.data().householdId) {
+        return userDoc.data().householdId;
+    }
+
     const householdId = uuidv4();
     const householdRef = doc(db, "households", householdId);
 
@@ -16,7 +23,6 @@ export const createHousehold = async (userId) => {
     });
 
     // Update user's household ID
-    const userRef = doc(db, "users", userId);
     await updateDoc(userRef, { householdId });
 
     return householdId;
