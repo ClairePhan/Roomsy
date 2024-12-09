@@ -19,6 +19,12 @@ const Login = () => {
         }
         catch(err) {
             console.log(err);
+            if (err.code === "auth/invalid-credential") {
+                alert("Login unsuccessful: Invalid credentials");
+            }
+            else {
+                alert("Login unsuccessful. Please try again.");
+            }
         }
         
     };

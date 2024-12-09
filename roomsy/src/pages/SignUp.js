@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/SignUp.css';
-import {auth} from '../services/firebase.js';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { signupUser } from '../services/auth.js';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -11,7 +10,7 @@ const SignUp = () => {
         e.preventDefault();
 
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
+            await signupUser(email, password);
             console.log("Account Created")
             alert("Account successfully created");
         }
@@ -20,8 +19,11 @@ const SignUp = () => {
             if (error.code === "auth/email-already-in-use") {
                 alert("The email address is already in use. Please use a different email.");
             }
+            else {
+                alert("Failed to create account. Please try again.");
+            }
         }
-    }
+    };
 
     return (
         <>
