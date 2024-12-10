@@ -5,6 +5,7 @@
     /* Font 2 */
     font-family: 'Outfit';
     src: url('../../fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+
 }
 
 body {
@@ -14,9 +15,9 @@ body {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    padding: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 300px;
+    padding-left: 250px;
+    padding-right: 250px;
     padding-bottom: 150px;
     row-gap: 50px;
     font-size:20px;
@@ -25,12 +26,21 @@ body {
 
 .version1-h1{
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
-    font-size: 45;
+    font-size: 40px;
     font-weight: bold;
     line-height: 0.9;
-    height: 29;
+    height: 20px;
     color: white;
     white-space: nowrap;
+
+}
+
+.version1-h2 {
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+    font-weight: 350;
+    font-size: 30px;
+    color: #8da4f7;
+    height: 50px;
 }
 
 h1 {
@@ -46,22 +56,22 @@ h1 {
 h2 {
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
     font-weight: 350;
-    font-size: 23;
-    color: white;
-    height: 25;
+    font-size: 32px;
+    color: #6788ff;
+    height: 50px;
 }
 
 h3 {
     color:#636377;
-    font-size: 16px;
-    height:10;
+    font-size: 19px;
+    height:8;
 }
 
 
 input[type="email"] {
-    width: 100%;
+    width: 115%;
     height: 45px;
-    font-size: 15;
+    font-size: 17;
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
     padding: 10px 10px;
     line-height: 50px;
@@ -73,9 +83,9 @@ input[type="email"] {
 }
 
 input[type="password"] {
-    width: 100%;
+    width: 115%;
     height: 45px;
-    font-size: 16px;
+    font-size: 17;
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
     padding: 10px 10px;
     line-height: 50px;
@@ -87,7 +97,7 @@ input[type="password"] {
 }
 
 
-button {
+#test {
     border: 1px solid #6788ff;
     padding: 15px;
     text-align: center;
@@ -104,10 +114,12 @@ button {
 
 
 .login-form {
-    padding: 40px;
+   
     color: black;
-    width: 500;
-    height: 400;
+    width: 370px;
+    height: 500px;
+   
+
 }
 
 
@@ -128,11 +140,14 @@ button {
 .checkbox {
     color: white;
     font-size: 16;
+    width: 445px;
+    height: 40px;
 }
 
 .register-link {
     color: white;
     font-size: 16;
+    width: 445px;
 }
 
 .login-info {
@@ -151,3 +166,18 @@ button {
     align-items: center;
     align-content: left;
 }
+
+
+.body-group {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    gap: 200px;
+
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  
+}
+

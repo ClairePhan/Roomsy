@@ -8,6 +8,7 @@
     src: url('../../fonts/Outfit-VariableFont_wght.ttf') format('truetype');
 }
 
+/*
 body {
     background-color: rgba(0,5,23,255);
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
@@ -22,4 +23,223 @@ body {
     row-gap: 50px;
     font-size:20px;
     
+}*/
+/*
+* {
+    font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
+}*/
+
+h2 {
+    color: white;
+    font-size: 22px;
 }
+h4 {
+    font-size: 27px;
+    font-weight: 480;
+}
+
+.nav-title {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    position:absolute;
+    top:0px;
+    left: 45px;
+    margin: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+/*
+.nav-title {
+    font-size:28;
+    font-weight: bold;
+}*/
+
+.feature-1 {
+    position:absolute;
+    border: 1px solid #6788ff !important;
+    padding: 12px;
+    text-align:center;
+    cursor:pointer;
+    border-radius: 14px;
+
+    margin-top: 25px;
+    margin-right: 45px;
+    width: 165px;
+    height: 50px;
+    top:55px;
+    right:25px;
+
+    font-weight:bold;
+  
+}
+
+#feature-2 {
+    position:absolute;
+    border: 1px solid #6788ff;
+    padding: 12px;
+    text-align:center;
+    cursor:pointer;
+    border-radius: 14px;
+
+    margin-top: 25px;
+    margin-right: 260px;
+    width: 165px;
+    height: 50px;
+    top:55px;
+    right:25px;
+    
+    font-weight:bold;
+}
+
+
+.breadcrumb-section {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    
+    gap: 100px;
+
+    margin-top: -60px;
+    margin-left: -172px;
+    margin-right: 200px;
+    
+}
+
+.option-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+.option-1:hover {
+    color: #6788ff;
+}
+
+.option-2 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 21px;
+}
+
+.option-2:hover{
+    color: #6788ff;
+}
+
+.option-3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+}
+.option-3:hover {
+    color: #6788ff;
+}
+
+
+.todo-title {
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.todo-section {
+    width: 30%;
+    max-width: 540px;
+    background: rgb(255, 255, 255);
+    /*margin: 100px auto 20px;*/
+    margin: -280px -40px;
+    padding: 10px 30px 20%;
+    border-radius: 10px;
+}
+
+
+.todo-table {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    background: rgb(27, 26, 26);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    margin-top: -20px;
+    color:white;
+    
+}
+.dashboard {
+    background-color: #1b1a38;
+    border-radius: 20px;
+    align-content: center;
+    padding: 100px;
+    width: 1185px;
+    height: 500px;
+    margin-top: -35px;
+    margin-left: -177px;
+}
+
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: white;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background: #6788ff;
+    color: white;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius:25px; 
+}
+
+
+ul li {
+    list-style:none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    left: -40px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../uncheckedbutton.svg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(../checkedbutton.svg);
+}
+/*
+.dash {
+    display:flex;
+    justify-content: flex-start;
+    align-content:center;  
+}
+
+.collective {
+    display:grid;
+    
+}*/
