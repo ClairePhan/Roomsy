@@ -1,0 +1,16 @@
+.rbc-calendar {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.fc-header-toolbar {
+    background-color: #f0f0f0;
+}
+
+.fc-daygrid-day-top {
+    background-color: #e3e3e3;
+}
+
+.fc-event {
+    background-color: #378006;
+    color: white;
+}
