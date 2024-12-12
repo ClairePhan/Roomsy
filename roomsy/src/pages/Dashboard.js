@@ -80,6 +80,7 @@ function Dashboard() {
     }, []);
     
 
+
  /*
     const Dashboard = () => {
         return (
@@ -89,6 +90,7 @@ function Dashboard() {
             </div>
         );
     }; */
+
 
     const displayInvite = () => {
         console.log("Calls dipslayInvite in useEffect");
@@ -121,7 +123,7 @@ function Dashboard() {
         setShowInviteRoommate(true);
     }
 //IF RESIDENT CLICKS DENY, THEY SHOULD ALSO BE REMOVED FROM PENDING INVITES
->>>>>>> a2e1826df6635f024cb475e8e3e4ef6bb07cdcb1
+
     return ( 
         <>
             
