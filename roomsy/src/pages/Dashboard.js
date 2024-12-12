@@ -7,8 +7,8 @@ import { db } from '../services/firebase';
 import { doc, getDoc, getDocs, collection, query, where } from 'firebase/firestore';
 import { acceptInvite, rejectInvite, createHousehold } from '../services/household';
 import QuoteOfDay from '../components/QuoteOfDay';
-import { addChoreToHousehold, getHouseholdChores } from "../services/firestore";
-
+import { addChoreToHousehold, getHouseholdChores, deleteChoreFromHousehold } from "../services/firestore";
+import deleteIcon from '../delete_icon.svg';
 
 function Dashboard() {
     const [userId, setUserId] = useState(null);
@@ -98,6 +98,11 @@ function Dashboard() {
             setChores((prev) => [...prev, newChore]);
             setNewChore("");
         }
+    }
+
+    const handleDeleteChore = async(chore) => {
+        await deleteChoreFromHousehold(householdId, chore);
+        setChores((prev) => prev.filter((c) => c !== chore));
     }
 
     const displayInvite = () => {
@@ -197,8 +202,16 @@ function Dashboard() {
                     
                         <ul id="list-container">
                             {chores.map((chore, index) => (
-                                <li key={index}>{chore}</li>
+                                <li key={index}>{chore}
+                                    <img
+                                        src={deleteIcon}
+                                        alt="Delete"
+                                        className="delete-icon"
+                                        onClick={() => handleDeleteChore(chore)}
+                                    />
+                                </li>
                             ))}
+                            
                             {/*<li class="checked">Clean out room</li>
                             <li>Laundry</li>
                             <li>Grocery store run</li>*/}

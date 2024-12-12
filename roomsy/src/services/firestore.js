@@ -1,4 +1,4 @@
-import {  doc, updateDoc, arrayUnion, getDoc } from "firebase/firestore";
+import {  doc, updateDoc, arrayUnion, arrayRemove, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
 
 export const addChoreToHousehold = async (householdId, chore) => {
@@ -19,4 +19,12 @@ export const getHouseholdChores = async (householdId) => {
         return householdDoc.data().chores || [];
     }
     return [];
+};
+
+export const deleteChoreFromHousehold = async (householdId, chore) => {
+    const householdRef = doc(db, "households", householdId);
+
+    await updateDoc(householdRef, {
+        chores: arrayRemove(chore),
+    });
 };

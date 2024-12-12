@@ -209,6 +209,15 @@ ul li {
     font-weight: bold;
     position: relative;
     left: -40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.delete-icon {
+    width: 6%;
+    height: auto;
 }
 
 ul li::before {
