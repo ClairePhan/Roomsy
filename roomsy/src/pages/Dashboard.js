@@ -8,6 +8,7 @@ import { doc, getDoc, getDocs, collection, query, where } from 'firebase/firesto
 import { acceptInvite, rejectInvite, createHousehold } from '../services/household';
 import QuoteOfDay from '../components/QuoteOfDay';
 
+
 function Dashboard() {
     const [userId, setUserId] = useState(null);
     const [userEmail, setuserEmail] = useState(null);
@@ -76,6 +77,7 @@ function Dashboard() {
         getUserId();
         displayInvite();
     }, []);
+    
 
     const displayInvite = () => {
         console.log("Calls dipslayInvite in useEffect");
@@ -112,32 +114,73 @@ function Dashboard() {
         <>
             
             <section className="collective">
-                <div className="calendar">
-                
-                </div>
-                <div className="dashboard">
-                    
+                <div className="grouping">
+                    <div className = "nav-bar">
+                        <h1 className="nav-title">
+                            <img src="/images/roomsy_icon2.png" alt="Photo of 3D blender bedroom, with a bed and desk"  align="center" width="13%" />
+                            <h4>Roomsy</h4>
+                        </h1>
+                    </div>
+
                     {showHouseholdInvite && 
                         <div className="acceptRejectinv">
                             <button id="accept" onClick={() => {
+                                setShowHouseholdInvite(false);
                                 handleInvite();
-                                displayInvite();
+                                //displayInvite();
                             }}>Accept Invite</button>
                             <button id="reject" onClick={() => {
+                                setShowHouseholdInvite(false);
                                 rejectInvite(userEmail);
                                 setInviteExists(null);
-                                displayInvite();
+                                //displayInvite();
                             }}>Reject Invite</button>
                         </div>
-                    }                   
+                    }
 
-                    <QuoteOfDay></QuoteOfDay>
                     <button onClick={() => {
-                        createHousehold(userId); 
-                        displayRoommateInvitation(); 
-                    }}>Add Roommate</button>
-                    {showInviteRoommate && <InviteRoommate householdId={householdId} />}
+                                createHousehold(userId); 
+                                displayRoommateInvitation(); 
+                            }}>Add Roommate
+                    </button>
+
+                    {showInviteRoommate && (<InviteRoommate householdId={householdId}
+                                            onClose={() => setShowInviteRoommate(false)} />)}
+                                  
                 </div>
+
+                <QuoteOfDay></QuoteOfDay>
+
+                <div className="breadcrumb-section">
+                    <h2 id="clickable-text" className="option-1">🧹Chore Scheduler</h2>
+                    <h2 className="option-2">💸Expense Tracker</h2>
+                    <h2 className="option-3">📌Pinned Messages</h2>
+                </div>
+
+
+         
+                <div className="dashboard">                 
+
+                    <div className="todo-section">
+                        <h2 className="todo-title">Chore List 📝</h2>
+
+                        <div class="todo-table">
+                            <input type="text" id="input-box" placeholder="Add new task"></input>
+                            <button type="submit" id ="todo-button" onclick="addTask()">Add</button>
+                        </div>
+                    
+                        <ul id="list-container">
+                            <li class="checked">Clean out room</li>
+                            <li>Laundry</li>
+                            <li>Grocery store run</li>
+                        </ul>
+                    </div>
+                    {/* This is ignored for now
+                    <div className="right-side">
+                        <h2>This is a test of the calendar</h2>
+                    </div>*/}
+                </div>
+
             </section>
         </>
     )

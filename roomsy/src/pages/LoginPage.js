@@ -30,11 +30,12 @@ const Login = () => {
     };
 
     return (
+        <div className="body-group">
         <>
             <div className="login-form">
             <form onSubmit={handleLogin}>
-                <h1 className="version1-h1">Roomsy.</h1>
-                <h2>A space for everyone.</h2>
+                <h1 className="version1-h1">Roomsy✨</h1>
+                <h2 className="version1-h2">A space for everyone</h2>
                 
                 <div className="login-info">
                     <div className="login-box">
@@ -63,18 +64,24 @@ const Login = () => {
                     <label>
                         <input type="checkbox" /> Remember me
                     </label>
-                    <a href="#" style={{ color: '#6788ff' }}>Forgot password?</a>
+                    <a href="#" style={{ color: '#8da4f7' }}>Forgot password?</a>
                 </div>
 
-                <button type="submit" className="test">Login</button>
+                <button type="submit" id="test">Login</button>
 
                 <div className="register-link">
                     <p>Don't have an account?</p>
-                    <a href="/signup" style={{ color: '#6788ff' }}>Sign Up</a>
+                    <a href="/signup" style={{ color: '#8da4f7' }}>Sign Up</a>
                 </div>
             </form>
+            </div>
+
+
+        <div className="logo">
+            <img src = "/images/roomsy_icon2.png" alt = "A corner model of a room with a bed" align="right" width="500px"/>
         </div>
         </>
+        </div>
     );
 }
 

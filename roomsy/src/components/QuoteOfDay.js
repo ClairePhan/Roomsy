@@ -59,7 +59,15 @@ const QuoteOfDay = () => {
     }, []);
     
     return (
-        <div className="quote">
+        <div className="quote" style={{
+            border: '1px solid white',
+            marginTop: 0,
+            paddingTop: 0,
+            paddingLeft: "15px",
+            marginBottom: "10%",
+            marginLeft: 0,
+            borderRadius: "20px"
+          }}>
           <p style={{ color: 'white' }}>{quote}</p>
           <p style={{ color: 'white' }}><em>- {author}</em></p>
         </div>
