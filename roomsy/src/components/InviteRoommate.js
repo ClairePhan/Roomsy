@@ -1,7 +1,7 @@
 import { inviteRoommate } from "../services/household";
 import { useState } from "react";
 
-function InviteRoommate({householdId}) {
+function InviteRoommate({householdId, onClose}) {
     const [email, setEmail] = useState('');
 
     const handleInvite = async () => {
@@ -11,9 +11,16 @@ function InviteRoommate({householdId}) {
         }
     };
 
+    const handleClose = () => {
+        onClose();
+    };
+
     return (
         <>
             <div className="invite-roommate">
+                <button onClick={handleClose}>
+                    X
+                </button>
                 <input 
                 type="email"
                 placeholder="Enter roommate's email."
@@ -23,6 +30,8 @@ function InviteRoommate({householdId}) {
                 }/>
                 <button onClick={handleInvite}>Invite Roommate</button>
             </div>
+            
+            
         </>
     );
 }
