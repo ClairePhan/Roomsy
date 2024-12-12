@@ -8,6 +8,13 @@
 
 }
 
+@media(max-width: 768px) {
+        h3 {
+            font-size: 120%;
+        }
+    
+}
+
 body {
     background-color: rgba(0,5,23,255);
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
@@ -26,7 +33,7 @@ body {
 
 .version1-h1{
     font-family: 'Manrope', 'Outfit', Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 200;
     font-weight: bold;
     line-height: 0.9;
     height: 20px;
@@ -63,7 +70,7 @@ h2 {
 
 h3 {
     color:#636377;
-    font-size: 19px;
+    font-size: 90%;
     height:8;
 }
 
@@ -114,7 +121,6 @@ input[type="password"] {
 
 
 .login-form {
-   
     color: black;
     width: 370px;
     height: 500px;
