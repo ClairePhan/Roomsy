@@ -8,6 +8,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { createHousehold } from '../services/household';
 
 
+
 function Dashboard() {
     const [userId, setUserId] = useState(null);
     const [householdId, setHouseholdId] = useState(null);
@@ -38,6 +39,16 @@ function Dashboard() {
     }, []);
     
 
+ /*
+    const Dashboard = () => {
+        return (
+            <div>
+                <h1>Welcome to my website</h1>
+                <WeekCalendar />
+            </div>
+        );
+    }; */
+
     return ( 
         <>
             <section className="collective">
@@ -67,7 +78,6 @@ function Dashboard() {
                 <div className="breadcrumb-section">
                     <h2 id="clickable-text" className="option-1">🧹Chore Scheduler</h2>
                     <h2 className="option-2">💸Expense Tracker</h2>
-                    <h2 className="option-3">📌Pinned Messages</h2>
                 </div>
 
 
@@ -88,15 +98,14 @@ function Dashboard() {
                             <li>Grocery store run</li>
                         </ul>
                     </div>
-                    {/* This is ignored for now
+                    
                     <div className="right-side">
-                        <h2>This is a test of the calendar</h2>
-                    </div>*/}
-                </div>
 
-            </section>
+                    </div>
+                </div> 
+            </section> 
         </>
-    )
+    );
 }
 
 export default Dashboard;
