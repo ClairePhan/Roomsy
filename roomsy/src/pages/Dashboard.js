@@ -80,7 +80,6 @@ function Dashboard() {
     }, []);
     
 
-<<<<<<< HEAD
  /*
     const Dashboard = () => {
         return (
@@ -91,7 +90,6 @@ function Dashboard() {
         );
     }; */
 
-=======
     const displayInvite = () => {
         console.log("Calls dipslayInvite in useEffect");
         console.log(inviteExists);
