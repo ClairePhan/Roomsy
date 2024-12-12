@@ -7,6 +7,7 @@ import { db } from '../services/firebase';
 import { doc, getDoc, getDocs, collection, query, where } from 'firebase/firestore';
 import { acceptInvite, rejectInvite, createHousehold } from '../services/household';
 import QuoteOfDay from '../components/QuoteOfDay';
+import { addChoreToHousehold, getHouseholdChores } from "../services/firestore";
 
 
 function Dashboard() {
@@ -16,6 +17,8 @@ function Dashboard() {
     const [inviteExists, setInviteExists] = useState(null); //do i set to false or null, reps if invite exists
     const [showHouseholdInvite, setShowHouseholdInvite] = useState(false);
     const [showInviteRoommate, setShowInviteRoommate] = useState(false);
+    const [chores, setChores] = useState([]);
+    const [newChore, setNewChore] = useState("");
     const navigate = useNavigate();
 
     useEffect( () => {     
@@ -77,7 +80,25 @@ function Dashboard() {
         getUserId();
         displayInvite();
     }, []);
+
+    useEffect(() => {
+        const fetchChores = async() => {
+            if (householdId) {
+                const chores = await getHouseholdChores(householdId);
+                setChores(chores);
+            }        
+        }
+        fetchChores();
+    }, [householdId]);
     
+
+    const handleAddChore = async() => {
+        if (newChore.trim()) {
+            await addChoreToHousehold(householdId, newChore);
+            setChores((prev) => [...prev, newChore]);
+            setNewChore("");
+        }
+    }
 
     const displayInvite = () => {
         console.log("Calls dipslayInvite in useEffect");
@@ -85,8 +106,6 @@ function Dashboard() {
         
         if (!inviteExists) {
             setShowHouseholdInvite(false);
-            //document.getElementById("accept").style.display = "none";
-            //document.getElementById("reject").style.display = "none";
         }
     }
 
@@ -109,7 +128,7 @@ function Dashboard() {
     const displayRoommateInvitation = () => {
         setShowInviteRoommate(true);
     }
-//IF RESIDENT CLICKS DENY, THEY SHOULD ALSO BE REMOVED FROM PENDING INVITES
+
     return ( 
         <>
             
@@ -165,14 +184,24 @@ function Dashboard() {
                         <h2 className="todo-title">Chore List 📝</h2>
 
                         <div class="todo-table">
-                            <input type="text" id="input-box" placeholder="Add new task"></input>
-                            <button type="submit" id ="todo-button" onclick="addTask()">Add</button>
+                            <input 
+                                type="text" 
+                                id="input-box" 
+                                placeholder="Add new task"
+                                value={newChore}
+                                onChange={(e) => setNewChore(e.target.value)}>
+
+                                </input>
+                            <button type="submit" id ="todo-button" onClick={handleAddChore}>Add</button>
                         </div>
                     
                         <ul id="list-container">
-                            <li class="checked">Clean out room</li>
+                            {chores.map((chore, index) => (
+                                <li key={index}>{chore}</li>
+                            ))}
+                            {/*<li class="checked">Clean out room</li>
                             <li>Laundry</li>
-                            <li>Grocery store run</li>
+                            <li>Grocery store run</li>*/}
                         </ul>
                     </div>
                     {/* This is ignored for now
